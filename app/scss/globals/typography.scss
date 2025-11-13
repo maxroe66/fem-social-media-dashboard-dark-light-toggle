@@ -1,7 +1,16 @@
+@use '../util' as *;
 h1, h2, h3  {
    margin-top: 0; 
+   line-height: 1.1;
 }
 
+h1 {
+    font-size: rem(24); // 24px ÷ 16px = 1.5rem
+    margin-bottom: rem(3); // 3px ÷ 16px = 0.1875rem
+    @include breakpoint(large) {
+        font-size: rem(28); // 28px ÷ 16px = 1.75rem
+    }
+}
 a, a:visited, a:active {
     text-decoration: none;
 }
