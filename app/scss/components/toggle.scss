@@ -8,6 +8,8 @@
     
     label {
         font-size: rem(14);
+        font-weight: 700;
+        color: var(--toggle);
 
         &[for="dark"] {
             line-height: rem(24);
@@ -22,8 +24,8 @@
     input[type="radio"] {
         opacity: 0;
         margin: 0 rem(-2) 0 rem(-2);
-        width: rem(20);
-        height: rem(20);
+        width: rem(24);
+        height: rem(24);
 
         &:focus ~ .toggle__button {
             border: rem(2) solid white;
@@ -38,7 +40,7 @@
         width: 100%;
         position: absolute;
         top: 0;
-        background: linear-gradient(225deg, var(--toggle-bg-end) 0%, var(--toggle-bg-start) 98%.02%);
+        background: var(--toggle-bg);
         pointer-events: none;
     }
     
@@ -50,7 +52,7 @@
         width: rem(18);
         height: rem(18);
         border-radius: 50%;
-        background-color: var(--dark-bg);
+        background-color: var(--toggle-button);
         transition: all 150ms ease-in-out;
     }
     #light:checked ~ .toggle__button {
